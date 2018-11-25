@@ -1,6 +1,6 @@
 {
   "name": "@my-script/vue-circle-progress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -23,7 +23,7 @@
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.17"
   },
-  "description": "see examples: https://yes-lee.github.io/vue-circle-progress/",
+  "description": "a circle progress component for vue",
   "main": "index.js",
   "directories": {
     "doc": "docs"

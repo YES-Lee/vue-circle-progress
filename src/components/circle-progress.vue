@@ -1,9 +1,8 @@
 <template>
   <div class="circle-progress-container">
     <svg version="1.1" class="circle-progress" viewbox="0 0 100 100" preserveAspectRatio="xMidYMid meet" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <circle class="progress-bg" :style="bgBarStyle" :stroke-width="barWidth + '%'" cx="50%" cy="50%" :r="circleRadius + '%'"></circle>
-      <circle class="progress-bar" :style="barStyle" :stroke-width="barWidth + '%'" cx="50%" cy="50%" :r="circleRadius + '%'" :stroke-dasharray="len + '%'" :stroke-dashoffset="progress + '%'"></circle>
-      <!-- <circle class="progress-dot" :cx="100 - barWidth / 2 + '%'" cy="50%" :r="barWidth / 6 + '%'" fill="#fff"></circle> -->
+      <circle class="progress-bg" :stroke="bgBarColor" :stroke-width="barWidth + '%'" cx="50%" cy="50%" :r="circleRadius + '%'"></circle>
+      <circle class="progress-bar" :stroke="barColor" :stroke-linecap="barRound ? 'round' : ''" :stroke-width="barWidth + '%'" cx="50%" cy="50%" :r="circleRadius + '%'" :stroke-dasharray="len + '%'" :stroke-dashoffset="progress + '%'"></circle>
     </svg>
     <div class="progress-text-panel">
       <slot>
@@ -30,22 +29,17 @@ export default {
       type: [Number, String],
       default: 14
     },
-    barStyle: {
-      type: Object,
-      default: () => ({
-        stroke: '#f69626',
-        fill: 'none',
-        'stroke-linecap': 'round',
-        'box-sizing': 'border-box'
-      })
+    barColor: {
+      type: String,
+      default: '#f69626'
     },
-    bgBarStyle: {
-      type: Object,
-      default: () => ({
-        stroke: '#f1f1f6',
-        fill: 'none',
-        'box-sizing': 'border-box'
-      })
+    bgBarColor: {
+      type: String,
+      default: '#f1f1f6'
+    },
+    barRound: {
+      type: Boolean,
+      default: false
     }
   },
   watch: {
@@ -115,5 +109,16 @@ export default {
 }
 .circle-progress {
   box-sizing: border-box;
+  .progress-bar {
+    // stroke: #f69626;
+    fill: none;
+    // stroke-linecap: round;
+    box-sizing: border-box;
+  }
+  .progress-bg {
+    // stroke: #f1f1f6;
+    fill: none;
+    box-sizing: border-box;
+  }
 }
 </style>

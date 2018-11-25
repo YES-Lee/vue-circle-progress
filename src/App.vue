@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-    <div class="progress">
-      <circle-progress :value="progress" :duration="duration" />
+    <div class="control-bar">
+      <input type="range" v-model="progress">
     </div>
-    <input type="range" v-model="progress">
+    <div class="instances">
+      <div class="progress">
+        <circle-progress :value="progress" :duration="duration" />
+      </div>
+      <div class="progress">
+        <circle-progress :value="progress" :duration="duration" :bar-width="28" />
+      </div>
+      <div class="progress">
+        <circle-progress :value="progress" :duration="duration" bar-color="#00bcd4" bar-round />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,10 +39,17 @@ export default {
 <style lang="less">
 #app {
   text-align: center;
-  .progress {
-    height: 200px;
-    width: 200px;
-    margin: 0 auto;
+  .control-bar {
+    padding: 15px;
+  }
+  .instances {
+    display: flex;
+    flex-wrap: wrap;
+    .progress {
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+    }
   }
 }
 </style>

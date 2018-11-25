@@ -1,6 +1,6 @@
 {
   "name": "circle-progress",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -22,5 +22,26 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YES-Lee/vue-circle-progress.git"
+  },
+  "keywords": [
+    "vue",
+    "circle-progress",
+    "progress",
+    "vue-progress"
+  ],
+  "author": "Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YES-Lee/vue-circle-progress/issues"
+  },
+  "homepage": "https://github.com/YES-Lee/vue-circle-progress#readme"
 }

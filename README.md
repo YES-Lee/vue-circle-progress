@@ -1,26 +1,32 @@
 # circle-progress
 
-## Project setup
+## usage
+
+### examples
+
+* [https://yes-lee.github.io/vue-circle-progress](https://yes-lee.github.io/vue-circle-progress/)
+
+### install
+```bash
+npm install @my-script/vue-circle-progress
 ```
-npm install
+or
+```bash
+yarn add @my-script/vue-circle-progress
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+### use
+```html
+<circle-progress :value="50" :duration="1000" bar-color="#00bcd4" bar-round />
 ```
 
-### Run your tests
-```
-npm run test
-```
+## props
 
-### Lints and fixes files
-```
-npm run lint
-```
+|name|type|description|
+|---|---|---|
+|value|Number|percent, 0~100|
+|duration|Number|duration of animate|
+|barColor|String|color of progress bar|
+|barWidth|Number|width of progress bar|
+|bgBarColor|String|color of background|
+|bar-round|Boolean|set `stroke-linecap` to `round`|
